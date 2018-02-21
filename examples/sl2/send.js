@@ -30,12 +30,12 @@ bus.on('connection.close', (err) => {
 // })
 
 const main = async () => {
-  let idx = 5
+  let idx = process.env.idx || 20
   while (idx--) {
     const data = {index: idx, msg: 'hello service bus'}
     bus.send(config.queue, data, {ack: true, durable: true})
     console.log(`[send] ${idx}`)
-    await sleep(1000)
+    await sleep(100)
   }
 }
 

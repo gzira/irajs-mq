@@ -3,5 +3,5 @@ module.exports = {
     url: process.env.RABBITMQ_URL || 'amqp://localhost'
     // enableConfirms: true
   },
-  queue: 'irajs.mq.sl2'
+  queue: 'irajs.mq.sl2.xx'
 }
